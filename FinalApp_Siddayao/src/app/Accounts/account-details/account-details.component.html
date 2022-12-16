@@ -1,0 +1,135 @@
+<div  class="container container-fluid-lg mx-auto p-3 bg-dark m-3" *ngIf = "account">     
+  <header class="fw-bolder p-1 fs-4" style="color: bisque;"> Account Details of {{account.fname}} {{account.lname}}</header>
+
+  <div class="row">
+    <div class="col-2">
+      <div class="form-floating mb-3">
+        <input type="text"class="form-control" id="floatingCode"placeholder="Account ID"
+               [(ngModel)]="account.id"> <label for="floatingid">Account Id</label>
+      </div>
+      </div>
+  </div>
+
+ <div class="row">
+      <div class="col-6">
+          <div class="form-floating mb-3">
+              <img src="{{account.imgPath}}" width="300" height="300" class="img-fluid">
+              <div class="form-group">
+                  <input class="form-control" type="file" id="formFile">
+                </div>
+          </div>
+          </div>
+      </div>
+
+
+
+  <div class="row">
+    <div class="col-5">
+      <div class="form-floating mb-3"> 
+        <input type="text" class="form-control" id="floatingCode"placeholder="fname"
+               [(ngModel)]="account.fname"><label for="floatingfname">First Name</label> 
+  </div>
+    </div>
+    <div class="col-5">
+      <div class="form-floating mb-3"> 
+        <input type="text" class="form-control" id="floatingCode"placeholder="lname"
+               [(ngModel)]="account.lname"><label for="floatinglname">Last Name</label> 
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-5">
+      <div class="form-floating mb-3">
+        <input type="text"class="form-control"id="floatingCode" placeholder="Email"
+               [(ngModel)]="account.email"><label for="floatingemail">Email</label>
+      </div>
+      </div>
+      <div class="col-5">
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="floatingCode" placeholder="Mobile"
+               [(ngModel)]="account.mobile"><label for="floatingmobile">Mobile</label>
+      </div>
+      </div>
+      </div>
+      <div class="row">
+        <div class="col-5">
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="floatingCode" placeholder="Gender"
+               [(ngModel)]="account.gender"><label for="floatinggender">Gender</label>
+      </div>
+      </div>
+      <div class="col-5">
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control"id="floatingCode" placeholder="Marital Status"
+               [(ngModel)]="account.marital"><label for="floatingmarital">Marital Status</label>
+      </div>
+      </div>
+      </div>
+      <div class="col-10">
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="floatingCode" placeholder="Date of Birth"
+               [(ngModel)]="account.dateofbirth"><label for="floatingdateb">Date of Birth</label>
+      </div>    
+    </div>
+      <div class="row">
+        <div class="col-5">
+      <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="floatingCode" placeholder="SSS"
+                 [(ngModel)]="account.SSS"><label for="floatingsss">SSS</label>
+        </div> 
+      </div>
+        <div class="col-5">
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="floatingCode" placeholder="Tin"
+                 [(ngModel)]="account.tin"><label for="floatingtin">Tin Number</label>
+        </div> 
+      </div>
+    </div>
+
+    <!--Complete Address-->
+    <div class="row">
+      <h2 for="floatingtin" style="color: bisque;" >Address</h2>
+      <div class="col-10">
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="floatingCode" placeholder="City"
+                 [(ngModel)]="account.add.city"><label for="floatingtin">City</label>
+        </div> 
+        </div>
+
+      <div class="row">
+        <div class="col-5">
+      <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="floatingCode" placeholder="Street"
+                 [(ngModel)]="account.add.street"><label for="floatingsss">Street</label>
+        </div> 
+      </div>
+        <div class="col-5">
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="floatingCode" placeholder="apt"
+                 [(ngModel)]="account.add.apt"><label for="floatingtin">Apt</label>
+        </div> 
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-5">
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="floatingCode" placeholder="Province"
+               [(ngModel)]="account.add.province"><label for="floatingsss">Province</label>
+      </div> 
+    </div>
+      <div class="col-5">
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="floatingCode" placeholder="Barangay"
+               [(ngModel)]="account.add.barangay"><label for="floatingtin">Barangay</label>
+      </div> 
+    </div>
+  </div>
+</div>
+
+<!---Button-->
+    <div class="modal-footer">
+      <button type="button"  class="btn btn-info"   (click)="save()" >Save changes</button>
+      <button type="button" class="btn btn-secondary" (click)="goBack()">Back</button>
+    </div>
+</div>

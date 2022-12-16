@@ -1,0 +1,36 @@
+<h3 style="color: bisque; text-align: center;">{{page_title}}</h3>
+<!--For adding data into the lists-->
+<div class="row align-item-center g-lg-5 py-5">
+  <div class="col-lg-12 fs-4">
+    <form class="p-4 p-md-5 border rounded-3 bg-dark">
+   
+      <h1 class="display-4 fw-bold lh-1 mb-3" style="color: bisque;">ADD NEW ACCOUNT</h1>
+      <div class="form-floating mb-3">
+        <input type="email" class="form-control" id="floatingInput" 
+        placeholder="name@example.com" #accountEmail>
+        <label for="floatinglname">Email</label> 
+      </div>
+<!--Button-->
+<button class="btn btn-secondary"type="submit" (click)="add(accountEmail.value); accountEmail.value=''">Add</button>
+</form>
+</div>
+</div>
+
+<div class="card text-center text-info ml-5 mr-5" *ngFor="let account of accounts">
+  <div class="card-body bg-info"></div>
+  <div style="text-align: left;"><img src="{{account.imgPath}}" width="100" alt="My Image" /></div>
+          <ul class="list-group list-group-flush">
+              <li class="list-group-item" > <b> Account Name: {{account.fname}} {{account.lname}}</b></li>
+              <li class="list-group-item" >  Email: {{account.email}}</li>
+              <li class="list-group-item" >Date of Birth: {{account.dateofbirth}}</li>
+          </ul>
+      
+  <!--Buttons-->
+  <div class="card-body">
+    <button type="button" class="btn btn-danger" [routerLink]="['/accounts', account.id]">
+      <i class="bi bi-danger-circle"></i>Edit</button>
+      <button type="button" class="btn btn-info" (click)="delete(account)">
+          <i class="bi bi-warning-circle"></i>Delete</button>
+  </div>
+</div>
+

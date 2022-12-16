@@ -1,0 +1,12 @@
+img{
+    height: 250px;
+    width: 250px;
+}
+h2{
+   margin-left: 37%;
+   font-weight: bold;
+}
+label{
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}

@@ -1,0 +1,111 @@
+<div  class="container container-fluid-lg mx-auto p-3 bg-dark m-3" *ngIf="order">     
+    <header class="fw-bolder p-1 fs-4" style="color: bisque;"> Order Details of {{order.item.name}}</header>
+    <div class="row">
+      <div class="col-6">
+          <div class="form-floating mb-3">
+              <img src="{{order.imgPath}}" width="300" height="300" class="img-fluid">
+              <div class="form-group">
+                  <input class="form-control" type="file" id="formFile">
+                </div>
+          </div>
+          </div>
+      </div>
+    <div class="row">
+      <div class="col-2">
+        <div class="form-floating mb-3">
+          <input type="text"class="form-control" id="floatingCode"placeholder="order ID"
+                 [(ngModel)]="order.id"> <label for="floatingid">Order Id</label>
+        </div>
+        </div>
+    </div>
+    <div class="row">
+      <div class="col-5">
+        <div class="form-floating mb-3"> 
+          <input type="text" class="form-control" id="floatingCode"placeholder="fname"
+                 [(ngModel)]="order.item.name"><label for="floatingfname">Item Name</label> 
+        </div>
+      </div>
+      <div class="col-5">
+        <div class="form-floating mb-3"> 
+          <input type="text" class="form-control" id="floatingCode"placeholder="lname"
+                 [(ngModel)]="order.item.description"><label for="floatinglname">Description</label> 
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-5">
+        <div class="form-floating mb-3">
+          <input type="text"class="form-control"id="floatingCode" placeholder="Email"
+                 [(ngModel)]="order.item.unit_price"><label for="floatingemail">Unit Price</label>
+        </div>
+        </div>
+        <div class="col-5">
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="floatingCode" placeholder="Mobile"
+                 [(ngModel)]="order.item.qty"><label for="floatingmobile">Quantity</label>
+        </div>
+        </div>
+        </div>
+        <div class="row">
+          <div class="col-5">
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="floatingCode" placeholder="Gender"
+                 [(ngModel)]="order.cname"><label for="floatinggender">Customer Name</label>
+        </div>
+        </div>
+        <div class="col-5">
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control"id="floatingCode" placeholder="Marital Status"
+                 [(ngModel)]="order.ccontact.email"><label for="floatingmarital">Customer Email</label>
+        </div>
+        </div>
+        </div>
+        <div class="col-10">
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="floatingCode" placeholder="Date of Birth"
+                 [(ngModel)]="order.ccontact.phone"><label for="floatingdateb">Customer Contact Number</label>
+        </div>    
+      </div>
+      <div class="row">
+        <h2 for="floatingtin" style="color: bisque;">Shipping Address</h2>
+        <div class="col-4">
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingCode" placeholder="Tin"
+                   [(ngModel)]="order.shipadd.street"><label for="floatingtin">Street</label>
+          </div> 
+          </div>
+          <div class="col-4">
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingCode" placeholder="Tin"
+                   [(ngModel)]="order.shipadd.barangay"><label for="floatingtin">Barangay</label>
+          </div> 
+        </div>
+
+        </div>
+        <div class="row">
+          <div class="col-4">
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="floatingCode" placeholder="Tin"
+                     [(ngModel)]="order.shipadd.province"><label for="floatingtin">Province</label>
+            </div> 
+          </div>
+
+          <div class="col-4">
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="floatingCode" placeholder="Tin"
+                     [(ngModel)]="order.shipadd.city"><label for="floatingtin">City</label>
+            </div> 
+          </div>
+        </div>
+
+
+      <div class="modal-footer">
+        <button type="button"  class="btn btn-secondary"   (click)="save()" >Save changes</button>
+        <button type="button" class="btn btn-primary" (click)="goBack()">Back</button>
+      </div>
+  </div>
+  
+    
+  
+          
+    

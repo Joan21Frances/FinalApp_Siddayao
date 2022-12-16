@@ -1,0 +1,32 @@
+<h3 style="color: bisque; text-align: center;" >{{title}}</h3>
+<div class="row align-item-center g-lg-5 py-5">
+  <div class="col-lg-12 fs-4">
+    <form class="p-4 p-md-5 border rounded-3 bg-dark">
+   
+      <h1 class="display-4 fw-bold lh-1 mb-3" style="color: bisque;">ADD NEW ORDER</h1>
+      <div class="form-floating mb-3">
+        <input type="product" class="form-control" id="floatingInput" 
+        placeholder="product" #orderEmail>
+        <label for="floatinglname">Product</label> 
+      </div>
+<!--Button-->
+<button class="btn btn-secondary"type="submit" (click)="add(orderEmail.value); orderEmail.value=''">Add</button>
+</form>
+</div>
+</div>
+
+  <div class="card text-center text-info ml-5 mr-5" *ngFor="let order of orders">
+    <div class="card-body bg-info"></div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item" > <b> Product Name: {{order.item.name}}</b></li>
+                <li class="list-group-item" >Product Description: {{order.item.description}}</li>
+            </ul>
+        
+    <!--Buttons-->
+    <div class="card-body">
+        <button type="button" class="btn btn-danger" [routerLink]="['/orders', order.id]">
+            <i class="bi bi-danger-circle"></i>Edit</button>
+            <button type="button" class="btn btn-info" (click)="delete(order)">
+                <i class="bi bi-warning-circle"></i>Delete</button>
+    </div>
+  </div>

@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "finalapp-siddayao"
+  },
+  "targets": {
+    "finalapp-siddayao": {
+      "hosting": {
+        "FinalApp_Siddayao": [
+          "finalapp-siddayao"
+        ]
+      }
+    }
+  }
+}
